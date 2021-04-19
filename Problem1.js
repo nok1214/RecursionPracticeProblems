@@ -23,19 +23,10 @@ step 7: return the factorial of that input number;
 //code starts here
 
 function findFactorial(num) {
-    if (num === 0 || num === 1) {                           //check if the input number is equal to 0 or 1;
+    if (num === 0) {                                        //check if the input number is equal to 0 or 1;
         return 1;                                           //return 1 if the input number is equal to 0 or 1;
     }
-    else if (num < 0) {                                     //check to see if the input number is less than 0;
-      return 'Fctorial number cannot be a negative number'         //if the input number is less than 0, return 'Factorial number cannot be a negative number';
-    };
-
-    for (var i=num-1; i>= 1; i--) {                         //use "for" loop to calculate the factorial of the input number
-        num = num * i;                                      //multiply the input number by the input number minus one;
-    }
-    return num;
-}
+    return  num * findFactorial(num - 1)        
+};
 
 console.log(findFactorial(5));                              //output 120;
-console.log(findFactorial(1));                              //output 1;
-console.log(findFactorial(-2));                             //output Fctorial number cannot be a negative number;
