@@ -17,6 +17,7 @@ function sumArray(arr) {
     }
 }
 
+
 console.log(sumArray(myArray1));    //output 36;
 console.log(sumArray(myArray2));    //output 25;
 console.log(sumArray(myArray3));    //output 79;
